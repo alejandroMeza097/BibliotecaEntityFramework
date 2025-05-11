@@ -1,0 +1,49 @@
+﻿@model List<Datos.Libros>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<main>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-4 mx-auto">
+                <div class="d-flex justify-content-center">
+                    <a class="btn btn-primary" href="/Home/IrAgregar" role="button">Agregar</a>
+                </div>
+            </div>
+            <div class="col-4"></div> 
+            <div class="col-4"></div>
+
+        </div>
+    </div>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>titulo</th>
+                <th>autor</th>
+                <th>genero</th>
+                <th>copias</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Datos.Libros libro in Model)
+            {
+                <tr>
+                    <td>@libro.idLibro</td>
+                    <td>@libro.titulo</td>
+                    <td>@libro.autor</td>
+                    <td>@libro.genero</td>
+                    <td>@libro.copias</td>
+                    <td> <a class="btn btn-danger" href="/Home/EliminarLibro/@libro.idLibro" role="button">Eliminar</a></td>
+                    <td> <a class="btn btn-warning" href="/Home/IrEditar/@libro.idLibro" role="button">Editar</a></td>
+                </tr>
+
+            }
+
+        </tbody>
+    </table>
+
+</main>

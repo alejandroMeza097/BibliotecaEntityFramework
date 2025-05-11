@@ -1,0 +1,38 @@
+﻿@model Datos.Libros
+@{
+    ViewBag.Title = "IrEditar";
+}
+
+
+
+<main>
+    <h2 class="text-center">Editar libro</h2>
+   
+
+    <form method="post" action="/Home/EditarLibro">
+        <div class="mb-3" hidden>
+            <label for="titulo" class="form-label">Título</label>
+            <input type="text" class="form-control" id="titulo" required name="idLibro" value="@Model.idLibro">
+        </div>
+        <div class="mb-3">
+            <label for="titulo" class="form-label">Título</label>
+            <input type="text" class="form-control" id="titulo" required name="titulo" value="@Model.titulo">
+        </div>
+        <div class="mb-3">
+            <label for="autor" class="form-label">Author</label>
+            <input type="text" class="form-control" id="autor" required name="autor" value="@Model.autor">
+        </div>
+        <div class="mb-3">
+            <label for="genero" class="form-label">Genero</label>
+            <input type="text" class="form-control" id="genero" required name="genero" value="@Model.genero">
+        </div>
+        <div class="mb-3">
+            <label for="copias" class="form-label">Copias</label>
+            <input type="number" class="form-control" id="copias" name="copias" required value="@Model.copias">
+        </div>
+
+        <button type="submit" class="btn btn-light">Editar</button>
+    </form>
+
+</main>
+

@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "IrAgregar";
+}
+
+
+<main>
+    <h2 class="text-center">Agrega un nuevo libro</h2>
+    <form method="post" action="/Home/AgregarLibro">
+        <div class="mb-3">
+            <label for="titulo" class="form-label">Título</label>
+            <input type="text" class="form-control" id="titulo" placeholder="Ingresa el título" required name="titulo">
+        </div>
+        <div class="mb-3">
+            <label for="autor" class="form-label">Author</label>
+            <input type="text" class="form-control" id="autor" name="autor" required>
+        </div>
+        <div class="mb-3">
+            <label for="genero" class="form-label">Genero</label>
+            <input type="text" class="form-control" id="genero" name="genero" required>
+        </div>
+        <div class="mb-3">
+            <label for="copias" class="form-label">Copias</label>
+            <input type="number" class="form-control" id="copias" name="copias" required>
+        </div>
+
+        <button type="submit" class="btn btn-light">Agregar</button>
+    </form>
+
+</main>
+
